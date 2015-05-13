@@ -9,7 +9,7 @@ session_start();
 //Make Constant using define.
 define('clientID', '6dea88c7c85f453eb40b4293a5040ac6');
 define('clientSecret', '117314e5478b4250a1454dc6ad726f2f');
-define('redirectURI', 'http://localhost/api/index.php');
+define('redirectURI', 'http://localhost/myapi/index.php');
 define('ImageDirectory', 'pics/');
 
 
@@ -30,7 +30,7 @@ function connectToInstagram($url){
 
 //Function to get UserID cause userName doesn't allow us to get pictures!
 function getUserID($userName){
-	$url = 'http://api.instagram.com/v1/users/search?q='.$userName. '&client_id='.clientID;
+	$url = 'https://api.instagram.com/v1/users/search?q=' . $userName . '&client_id=' .clientID;
 	$instagramInfo = connectToInstagram($url);
 	$results = json_decode($instagramInfo, true);
 
@@ -38,18 +38,18 @@ function getUserID($userName){
 }
 
 //Function to print images onto screen
-function printImages($userID){
-	$url = 'http://api.instagram.com/v1/users/'.$userID.'/media/recent?client_id='.clientID.'&count=5';
+function printImages($userID)
+{
+	$url = 'https://api.instagram.com/v1/users/' . $userID . '/media/recent?client_id='.clientID . '&count=5';
 	$instagramInfo = connectToInstagram($url);
 	$results = json_decode($instagramInfo, true);
-	//Parse through the information one by one
-	foreach ($results['data'] as $items) {
-		$image_url = $items['images']['low_resolution']['url'];//going to go through all of my results and give myself back the URL of those pictures 
-		//because we want to have it in the PHP Server.
-		echo '<img src=" '.$image_url.'"/>br/>';
-		//calling a function to save that $image_url
-		savePictures($image_url);
-	}
+
+	//Parse through thet information one by one
+	foreach($results['data'] as $items)
+	 {
+	 	$image_url = $items['images']['low_resolution']['url']; //go through all of the results and give back the url of those pictures because we want to save it in the php server.
+	 	echo '<img src=" '. $image_url .' "/><br/>';
+	 }
 }
 
 //Function to save a image to server
@@ -84,7 +84,10 @@ curl_close($curl);
 $results = json_decode($result, true);
 $userName =  $results['user']['username'];
 
-$userID = getUserID($username);
+//echo $userName;
+
+$userID = getUserID($userName);
+//echo $userID;
 
 printImages($userID);
 }

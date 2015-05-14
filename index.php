@@ -1,5 +1,13 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="login.css"/>
+	<title></title>
+</head>
+<body>
 
+
+<?php
 //Configuration for our PHP Server
 set_time_limit(0);
 ini_set('default_socket_timeout', 300);
@@ -52,14 +60,13 @@ function printImages($userID)
 	 }
 }
 
-//Function to save a image to server
-function savePictures($image_url){
-	echo $image_url. '<br>'; 
-	$filename = basename($image_url);// the filename is what we are storing. basename is the PHP built in method that we are using to store $image_url
-	echo $filename . '<br>';
-
-	$destination = ImageDirectory . $filename;//making sure that the image doesnt exist in the storage.
-	file_put_contents($destination, file_get_contents($image_url));//goes and grabs an imagefile and stores it into our server
+//Function to save image to server
+function savePictures($userID){
+	echo $image_url .'<br>';
+	$filename = basename($image_url); //the filename is what we are storing. basename is the PHP built that we are using to store $image_url
+	echo $filename. '<br>';
+	$destination = ImageDirectory . $filename; //making sure that the image doesn't exist in the storage.
+	file_get_contents($destination, file_get_contents($image_url)); //gets and grabs an image file and stores it into our server
 }
 
 if (isset($_GET['code'])){
@@ -94,10 +101,14 @@ printImages($userID);
 else{
 
 ?>
+</body>
+</html>
 
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="main.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Nova+Flat' rel='stylesheet' type='text/css'>
 	<title></title>
 </head>
 <body>

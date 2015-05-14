@@ -1,0 +1,11 @@
+body{
+	background-color: green;
+}
+
+/*iPhone 6 Portrait*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) { 
+	body{
+		background-color: pink;
+	}
+
+}

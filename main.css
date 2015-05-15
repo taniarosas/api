@@ -4,7 +4,7 @@ body{
 
 }
 @keyframes myshift{
- 15% {background-image: url("http://i.huffpost.com/gen/1490025/images/o-J-COLE-facebook.jpg");} 
+  15% {background-image: url("http://i.huffpost.com/gen/1490025/images/o-J-COLE-facebook.jpg");} 
   25% {background-image: url("http://1.bp.blogspot.com/_FCC0cZ15hhA/TEzDjpd8NvI/AAAAAAAAAAk/veIz3rDHBCA/s1600/zac_efron_1280089690.jpg");}
   50% {background-image: url("http://www.ixdaily.com/storage/article/3335160-b4e7f267.jpg");}
   75% {background-image: url("http://iris.theaureview.com/wp-content/uploads/2014/06/22-jump-street-03.jpg");}
@@ -83,7 +83,7 @@ a.button:hover{
 	background-size: cover;
 }
 @keyframes myshift{
- 15% {background-image: url("http://i.huffpost.com/gen/1490025/images/o-J-COLE-facebook.jpg");} 
+  15% {background-image: url("http://i.huffpost.com/gen/1490025/images/o-J-COLE-facebook.jpg");} 
   25% {background-image: url("http://1.bp.blogspot.com/_FCC0cZ15hhA/TEzDjpd8NvI/AAAAAAAAAAk/veIz3rDHBCA/s1600/zac_efron_1280089690.jpg");}
   50% {background-image: url("http://www.ixdaily.com/storage/article/3335160-b4e7f267.jpg");}
   75% {background-image: url("http://iris.theaureview.com/wp-content/uploads/2014/06/22-jump-street-03.jpg");}

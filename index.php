@@ -4,7 +4,7 @@
 	<link rel="stylesheet" type="text/css" href="login.css"/>
 	<title></title>
 </head>
-<body>
+<body class="body2">
 
 
 <?php
@@ -112,10 +112,13 @@ else{
 	<title></title>
 </head>
 <body>
-	
-	<a href="https://api.instagram.com/oauth/authorize/?client_id=<?php echo clientID; ?>&redirect_uri=<?php echo redirectURI; ?>&response_type=code">Login</a>
+
+<div class="buttonContainer">
+	<h1>Welcome..</h1>
+	<a class="button" href="https://api.instagram.com/oauth/authorize/?client_id=<?php echo clientID; ?>&redirect_uri=<?php echo redirectURI; ?>&response_type=code">Login</a>
+</div>
+
 	<script type="js/main.js "></script>
-	
 </body>
 </html>
 <?php

@@ -64,7 +64,7 @@ function printImages($userID)
 
 //Function to save image to server
 function savePictures($image_url){
-	echo $image_url .'<br>';
+	return $image_url .'<br>';
 	$filename = basename($image_url); //the filename is what we are storing. basename is the PHP built that we are using to store $image_url
 	echo $filename. '<br>';
 	$destination = ImageDirectory . $filename; //making sure that the image doesn't exist in the storage.

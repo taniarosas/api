@@ -6,7 +6,6 @@
 	<title></title>
 </head>
 <div id="page">
-
 <?php
 //Configuration for our PHP Server
 set_time_limit(0);

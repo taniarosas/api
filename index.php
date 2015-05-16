@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="login.css"/>
+	<link rel="stylesheet" type="text/css" href="main.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Nova+Flat' rel='stylesheet' type='text/css'>
 	<title></title>
-
 </head>
-<body>
+<div id="page">
 
-    	
 <?php
 //Configuration for our PHP Server
 set_time_limit(0);
@@ -103,18 +102,8 @@ printImages($userID);
 else{
 
 ?>
+</div>
 
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="main.css"/>
-	<link href='http://fonts.googleapis.com/css?family=Nova+Flat' rel='stylesheet' type='text/css'>
-	<title></title>
-</head>
 <body>
 
 <div class="buttonContainer">
